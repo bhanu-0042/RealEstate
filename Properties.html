@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeLiving - Properties</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1e293b',
+              secondary: '#fbbf24',
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-2 bg-white shadow-md text-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer">
+            <i data-lucide="home" class="h-8 w-8 text-indigo-600"></i>
+            <span class="ml-2 font-bold text-xl">LuxeLiving</span>
+          </a>
+
+          <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="font-medium hover:text-amber-500 transition-colors">Home</a>
+            <a href="properties.html" class="font-medium text-amber-500 transition-colors">Properties</a>
+            <a href="about.html" class="font-medium hover:text-amber-500 transition-colors">About</a>
+            <a href="partners.html" class="font-medium hover:text-amber-500 transition-colors">Partners</a>
+            <a href="contact.html" class="font-medium hover:text-amber-500 transition-colors">Contact</a>
+          </div>
+
+        
+
+          <div class="md:hidden flex items-center">
+            <button onclick="toggleMobileMenu()" class="hover:text-amber-500 focus:outline-none">
+              <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl absolute top-full left-0 w-full text-slate-900">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="index.html" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-indigo-600 hover:bg-gray-50">Home</a>
+          <a href="properties.html" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-gray-50">Properties</a>
+          <a href="#about" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-indigo-600 hover:bg-gray-50">About</a>
+          <a href="#partners" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-indigo-600 hover:bg-gray-50">Partners</a>
+          <a href="#contact" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-indigo-600 hover:bg-gray-50">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="pt-24 pb-20 min-h-screen">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in-up">
+          <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">All Properties</h1>
+          <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+            Browse our complete collection of luxury flats, villas, and penthouses.
+          </p>
+        </div>
+
+        <div id="all-properties-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0"><span class="text-white font-bold text-xl">LuxeLiving</span><p class="text-sm mt-1">© 2024 All rights reserved.</p></div>
+        <div class="flex space-x-6 text-sm">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Property Modal -->
+    <div id="property-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm transition-opacity opacity-0" onclick="closeModal(event)">
+      <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto relative fade-in-up" onclick="event.stopPropagation()">
+        <button onclick="closeModal()" class="absolute top-4 right-4 bg-white/90 p-2 rounded-full hover:bg-slate-100 transition-colors z-10 cursor-pointer">
+          <i data-lucide="x" class="h-6 w-6 text-slate-800"></i>
+        </button>
+        <div class="grid md:grid-cols-2" id="modal-content">
+          <!-- Content populated via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/15550123456" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-3 rounded-full shadow-2xl hover:scale-110 transition-transform z-[100] flex items-center justify-center" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="w-8 h-8">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProperties('all-properties-list', false); // false = all properties
+        });
+    </script>
+</body>
+</html>

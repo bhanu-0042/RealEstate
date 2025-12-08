@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeLiving - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1e293b',
+              secondary: '#fbbf24',
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-slate-900">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-2 bg-white shadow-md text-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer">
+            <i data-lucide="home" class="h-8 w-8 text-indigo-600"></i>
+            <span class="ml-2 font-bold text-xl">LuxeLiving</span>
+          </a>
+
+          <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="font-medium hover:text-amber-500 transition-colors">Home</a>
+            <a href="properties.html" class="font-medium hover:text-amber-500 transition-colors">Properties</a>
+            <a href="about.html" class="font-medium text-amber-500 transition-colors">About</a>
+            <a href="partners.html" class="font-medium hover:text-amber-500 transition-colors">Partners</a>
+            <a href="contact.html" class="font-medium hover:text-amber-500 transition-colors">Contact</a>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button onclick="toggleMobileMenu()" class="hover:text-amber-500 focus:outline-none">
+              <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl absolute top-full left-0 w-full text-slate-900">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="index.html" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-indigo-600 hover:bg-gray-50">Home</a>
+          <a href="properties.html" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-indigo-600 hover:bg-gray-50">Properties</a>
+          <a href="about.html" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-gray-50">About</a>
+          <a href="partners.html" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-indigo-600 hover:bg-gray-50">Partners</a>
+          <a href="contact.html" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-indigo-600 hover:bg-gray-50">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 min-h-screen">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-16 fade-in-up">
+          <span class="text-indigo-600 font-semibold uppercase tracking-wider text-sm">Our Story</span>
+          <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mt-2 mb-6">About LuxeLiving</h1>
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+            Since 2005, we have been at the forefront of the luxury real estate market, helping thousands of clients find their perfect home.
+          </p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div>
+            <img 
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+              alt="Team Meeting" 
+              class="rounded-2xl shadow-2xl w-full object-cover h-[400px]"
+            />
+          </div>
+          <div class="space-y-6">
+            <h2 class="text-3xl font-bold text-slate-900">Our Mission</h2>
+            <p class="text-slate-600 text-lg leading-relaxed">
+              We believe that luxury is not just about price tags; it's about the quality of life. Our mission is to curate spaces that inspire, comfort, and elevate the everyday experience of our clients.
+            </p>
+            <p class="text-slate-600 text-lg leading-relaxed">
+              With a team of dedicated professionals, we offer personalized services that go beyond the transaction. We build relationships that last a lifetime.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+          <div class="bg-slate-50 p-8 rounded-xl text-center">
+            <h3 class="text-4xl font-bold text-indigo-600 mb-2">15+</h3>
+            <p class="text-slate-600 font-medium">Years of Experience</p>
+          </div>
+          <div class="bg-slate-50 p-8 rounded-xl text-center">
+            <h3 class="text-4xl font-bold text-indigo-600 mb-2">2500+</h3>
+            <p class="text-slate-600 font-medium">Properties Sold</p>
+          </div>
+          <div class="bg-slate-50 p-8 rounded-xl text-center">
+            <h3 class="text-4xl font-bold text-indigo-600 mb-2">50+</h3>
+            <p class="text-slate-600 font-medium">Awards Won</p>
+          </div>
+          <div class="bg-slate-50 p-8 rounded-xl text-center">
+            <h3 class="text-4xl font-bold text-indigo-600 mb-2">98%</h3>
+            <p class="text-slate-600 font-medium">Client Satisfaction</p>
+          </div>
+        </div>
+
+        <!-- Values -->
+        <div class="grid md:grid-cols-3 gap-8">
+           <div class="border border-slate-100 p-8 rounded-xl hover:shadow-lg transition-shadow">
+             <div class="bg-indigo-100 p-3 rounded-lg w-14 h-14 flex items-center justify-center mb-6">
+               <i data-lucide="award" class="h-8 w-8 text-indigo-600"></i>
+             </div>
+             <h3 class="text-xl font-bold text-slate-900 mb-3">Excellence</h3>
+             <p class="text-slate-600">We strive for perfection in every detail, ensuring the highest standards in all our listings.</p>
+           </div>
+           <div class="border border-slate-100 p-8 rounded-xl hover:shadow-lg transition-shadow">
+             <div class="bg-amber-100 p-3 rounded-lg w-14 h-14 flex items-center justify-center mb-6">
+               <i data-lucide="users" class="h-8 w-8 text-amber-600"></i>
+             </div>
+             <h3 class="text-xl font-bold text-slate-900 mb-3">Client Focus</h3>
+             <p class="text-slate-600">Your needs are our priority. We listen, adapt, and deliver solutions tailored to you.</p>
+           </div>
+           <div class="border border-slate-100 p-8 rounded-xl hover:shadow-lg transition-shadow">
+             <div class="bg-green-100 p-3 rounded-lg w-14 h-14 flex items-center justify-center mb-6">
+               <i data-lucide="globe" class="h-8 w-8 text-green-600"></i>
+             </div>
+             <h3 class="text-xl font-bold text-slate-900 mb-3">Global Reach</h3>
+             <p class="text-slate-600">With connections worldwide, we can help you find a home anywhere your heart desires.</p>
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0"><span class="text-white font-bold text-xl">LuxeLiving</span><p class="text-sm mt-1">© 2024 All rights reserved.</p></div>
+        <div class="flex space-x-6 text-sm">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
